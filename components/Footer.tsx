@@ -89,20 +89,13 @@ export const Footer = () => (
         </div>
       </div>
 
-      <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between',
-        gap: 32, paddingBottom: 40, flexWrap: 'wrap' }}>
-        <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.25)' }}>
+      <div style={{ paddingBottom: 40, borderTop: '1px solid rgba(255,255,255,0.04)', paddingTop: 24 }}>
+        <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.22)', marginBottom: 8 }}>
           © 2024 Smart Pulse · Biofeedback Thailand Official · All rights reserved.
         </p>
-        <div style={{ maxWidth: 500, background: 'rgba(255,255,255,0.03)',
-          border: '1px solid rgba(255,255,255,0.06)', borderRadius: 14, padding: '16px 20px' }}>
-          <span style={{ fontSize: 10, fontWeight: 700, color: 'rgba(255,255,255,0.3)',
-            textTransform: 'uppercase', letterSpacing: '0.1em' }}>⚠ คำเตือน</span>
-          <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.22)', lineHeight: 1.65, marginTop: 6 }}>
-            ผลตรวจใช้เพื่อดูแลสุขภาพเบื้องต้นเท่านั้น ไม่ใช่การวินิจฉัยโรคหรือทดแทนการตรวจของแพทย์
-            หากผลผิดปกติควรปรึกษาแพทย์ กรุณาอ่านคำเตือนในเอกสารกำกับเครื่องมือแพทย์ก่อนใช้
-          </p>
-        </div>
+        <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.15)', lineHeight: 1.65 }}>
+          ผลตรวจใช้เพื่อดูแลสุขภาพเบื้องต้นเท่านั้น ไม่ใช่การวินิจฉัยโรคหรือทดแทนการตรวจของแพทย์ หากผลผิดปกติควรปรึกษาแพทย์
+        </p>
       </div>
     </div>
   </footer>
