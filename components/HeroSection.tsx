@@ -77,21 +77,14 @@ export const HeroSection = () => {
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.45 }}
               style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 44 }}>
-              <motion.a href="mailto:u.tharin@gmail.com"
+              <motion.a href="#contact"
+                onClick={e => { e.preventDefault(); document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' }); }}
                 whileHover={{ scale: 1.04, boxShadow: '0 16px 40px rgba(0,196,212,0.5)' }}
                 whileTap={{ scale: 0.97 }}
                 style={{ background: '#00C4D4', color: '#fff', fontWeight: 800, fontSize: 15,
                   padding: '15px 34px', borderRadius: 12, letterSpacing: '-0.2px',
                   textDecoration: 'none', display: 'inline-block' }}>
                 สั่งซื้อ / ขอข้อมูล
-              </motion.a>
-              <motion.a href="tel:+66894443424"
-                whileHover={{ scale: 1.04, background: 'rgba(255,255,255,0.08)' }}
-                whileTap={{ scale: 0.97 }}
-                style={{ color: '#fff', fontWeight: 700, fontSize: 15, padding: '15px 34px',
-                  borderRadius: 12, border: '1.5px solid rgba(255,255,255,0.22)',
-                  textDecoration: 'none', display: 'inline-block' }}>
-                📞 089-444-3424
               </motion.a>
             </motion.div>
 
