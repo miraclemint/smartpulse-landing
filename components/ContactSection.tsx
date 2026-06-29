@@ -40,14 +40,20 @@ export const ContactSection = () => {
     const form = e.currentTarget;
     const data = new FormData(form);
     try {
-      await fetch('/', {
+      const res = await fetch('https://formspree.io/f/mgojzrlz', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(data as any).toString(),
+        body: data,
+        headers: { Accept: 'application/json' },
       });
-      setSubmitted(true);
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setSubmitting(false);
+        alert('เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง');
+      }
     } catch {
       setSubmitting(false);
+      alert('เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง');
     }
   };
 
@@ -140,14 +146,8 @@ export const ContactSection = () => {
                   </motion.div>
                 ) : (
                   <motion.form key="form"
-                    name="contact" method="POST"
-                    data-netlify="true" netlify-honeypot="bot-field"
                     onSubmit={handleSubmit}
                     style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-
-                    {/* Netlify hidden fields */}
-                    <input type="hidden" name="form-name" value="contact" />
-                    <input type="hidden" name="bot-field" style={{ display: 'none' }} />
 
                     <div style={{ marginBottom: 4 }}>
                       <h3 style={{ fontSize: 20, fontWeight: 900, color: '#0B1F3A', marginBottom: 4 }}>
