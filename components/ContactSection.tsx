@@ -160,7 +160,7 @@ export const ContactSection = () => {
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
                       <div>
                         <label style={labelStyle}>ชื่อ-นามสกุล <span style={{ color: '#FF6B6B' }}>*</span></label>
-                        <input required name="name" type="text" placeholder="ธาริน อุเทนรัตน์"
+                        <input required name="name" type="text" placeholder="กรอกชื่อ-นามสกุล"
                           onFocus={() => onFocus('name')} onBlur={() => onBlur('name')}
                           style={inputStyle(!!focused.name)} />
                       </div>
