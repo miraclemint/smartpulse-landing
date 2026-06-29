@@ -105,23 +105,6 @@ export const ContactSection = () => {
               </motion.div>
             ))}
 
-            {/* Direct contact */}
-            <div style={{ marginTop: 40, paddingTop: 32, borderTop: '1px solid rgba(255,255,255,0.08)' }}>
-              <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase',
-                color: 'rgba(255,255,255,0.3)', marginBottom: 16 }}>หรือติดต่อโดยตรง</div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                <a href="mailto:u.tharin@gmail.com"
-                  style={{ display: 'inline-flex', alignItems: 'center', gap: 10,
-                    fontSize: 14, fontWeight: 600, color: '#00C4D4' }}>
-                  📧 u.tharin@gmail.com
-                </a>
-                <a href="tel:+66894443424"
-                  style={{ display: 'inline-flex', alignItems: 'center', gap: 10,
-                    fontSize: 14, fontWeight: 600, color: '#00C4D4' }}>
-                  📞 089-444-3424
-                </a>
-              </div>
-            </div>
           </motion.div>
 
           {/* RIGHT — form */}
