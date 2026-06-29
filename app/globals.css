@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0A2D5E;
+  --color-teal: #00A3B4;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: var(--font-ibm), 'IBM Plex Sans Thai', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #fff;
+  color: #0B1F3A;
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+.container { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+/* Grid — use !important so media queries override inline styles */
+.grid-2 { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 64px; align-items: center; }
+.grid-4 { display: grid !important; grid-template-columns: repeat(4, 1fr) !important; gap: 24px; }
+.grid-3 { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 24px; }
+
+.flex { display: flex; }
+.flex-center { display: flex; align-items: center; justify-content: center; }
+.flex-col { display: flex; flex-direction: column; }
+
+/* ─── Mobile ─── */
+@media (max-width: 768px) {
+  html { font-size: 15px; }
+
+  .container { padding: 0 20px; }
+
+  .grid-2 { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .grid-4 { grid-template-columns: repeat(2, 1fr) !important; gap: 14px !important; }
+  .grid-3 { grid-template-columns: 1fr !important; }
+
+  .hide-mobile { display: none !important; }
+  .order-first-mobile { order: -1 !important; }
+
+  /* Sections — reduce padding */
+  section { padding-top: 72px !important; padding-bottom: 72px !important; }
+
+  /* Hero chips — hide on mobile (they overflow) */
+  .hero-chip { display: none !important; }
+
+  /* Nav links — hide on mobile */
+  .nav-links { display: none !important; }
+
+  /* Footer grid */
+  .footer-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+
+  /* Cert grid inside StatsSection */
+  .cert-grid { grid-template-columns: 1fr !important; }
+
+  /* Hero padding */
+  .hero-inner { padding-top: 80px !important; padding-bottom: 60px !important; }
+
+  /* Reduce heading letter-spacing on mobile */
+  h1, h2 { letter-spacing: -0.5px !important; }
+}
+
+/* ─── Small phones ─── */
+@media (max-width: 480px) {
+  html { font-size: 14px; }
+  .container { padding: 0 16px; }
+}
