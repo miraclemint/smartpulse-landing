@@ -52,7 +52,7 @@ export const ContactSection = () => {
   };
 
   return (
-    <section suppressHydrationWarning style={{ background: '#0B1F3A', padding: '112px 0', position: 'relative', overflow: 'hidden' }}>
+    <section id="contact" suppressHydrationWarning style={{ background: '#0B1F3A', padding: '112px 0', position: 'relative', overflow: 'hidden' }}>
       {/* BG decoration */}
       <div style={{ position: 'absolute', left: -150, top: '50%', transform: 'translateY(-50%)',
         width: 500, height: 500, borderRadius: '50%', pointerEvents: 'none',

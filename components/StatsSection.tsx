@@ -24,7 +24,7 @@ const uses = [
 ];
 
 export const StatsSection = () => (
-  <section suppressHydrationWarning style={{ background: '#0B1F3A', padding: '112px 0', position: 'relative', overflow: 'hidden' }}>
+  <section id="stats" suppressHydrationWarning style={{ background: '#0B1F3A', padding: '112px 0', position: 'relative', overflow: 'hidden' }}>
     {/* BG decoration — no image, pure CSS */}
     <div style={{ position: 'absolute', right: -100, top: '50%', transform: 'translateY(-50%)',
       width: 500, height: 500, borderRadius: '50%', pointerEvents: 'none',

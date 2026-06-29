@@ -79,7 +79,7 @@ export const HowItWorksSection = () => {
   const imgX = useTransform(scrollYProgress, [0.1, 0.5], [-40, 0]);
 
   return (
-    <section suppressHydrationWarning ref={ref} style={{ background: '#F8FAFC', padding: '112px 0', overflow: 'hidden' }}>
+    <section id="how-it-works" suppressHydrationWarning ref={ref} style={{ background: '#F8FAFC', padding: '112px 0', overflow: 'hidden' }}>
       <div className="container">
         <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }} transition={{ duration: 0.6 }}

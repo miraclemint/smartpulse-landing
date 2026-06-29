@@ -54,7 +54,7 @@ export const FeaturesSection = () => {
   const arterialItems = ['อัตราการเต้นของหัวใจ', 'Type สภาวะหลอดเลือด (7 ประเภท)', 'ความยืดหยุ่นหลอดเลือดแดง', 'ความยืดหยุ่นส่วนปลาย', 'ระดับสุขภาพหลอดเลือด'];
 
   return (
-    <section suppressHydrationWarning style={{ background: '#fff', padding: '112px 0' }}>
+    <section id="features" suppressHydrationWarning style={{ background: '#fff', padding: '112px 0' }}>
       <div className="container">
         <motion.div {...fadeUp()} style={{ textAlign: 'center', marginBottom: 72 }}>
           <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase',
