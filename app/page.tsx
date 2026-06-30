@@ -13,9 +13,9 @@ export default function Home() {
     <main className="overflow-hidden">
       <Navbar />
       <HeroSection />
+      <StatsSection />
       <FeaturesSection />
       <HowItWorksSection />
-      <StatsSection />
       <CTASection />
       <FAQSection />
       <ContactSection />
