@@ -39,11 +39,13 @@ export const ContactSection = () => {
     setSubmitting(true);
     const form = e.currentTarget;
     const data = new FormData(form);
+    const encoded = new URLSearchParams();
+    data.forEach((value, key) => encoded.append(key, value as string));
     try {
-      const res = await fetch('https://formspree.io/f/mgojzrlz', {
+      const res = await fetch('/', {
         method: 'POST',
-        body: data,
-        headers: { Accept: 'application/json' },
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encoded.toString(),
       });
       if (res.ok) {
         setSubmitted(true);
@@ -129,8 +131,13 @@ export const ContactSection = () => {
                   </motion.div>
                 ) : (
                   <motion.form key="form"
+                    name="contact"
                     onSubmit={handleSubmit}
+                    data-netlify="true"
+                    netlify-honeypot="bot-field"
                     style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+                    <input type="hidden" name="form-name" value="contact" />
+                    <input type="hidden" name="bot-field" />
 
                     <div style={{ marginBottom: 4 }}>
                       <h3 style={{ fontSize: 20, fontWeight: 900, color: '#0B1F3A', marginBottom: 4 }}>
