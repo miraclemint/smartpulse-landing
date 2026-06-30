@@ -107,13 +107,14 @@ export const HeroSection = () => {
               background: 'radial-gradient(circle, rgba(0,196,212,0.18) 0%, transparent 70%)',
               pointerEvents: 'none' }} />
 
-            <motion.div
-              style={{ y: deviceY }}
-              animate={{ y: [0, -16, 0] }}
-              transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}>
-              <Image src="/images/sp01.png" alt="SmartPulse Device"
-                width={400} height={400} priority
-                style={{ filter: 'drop-shadow(0 40px 80px rgba(0,196,212,0.4))', maxWidth: '100%' }} />
+            <motion.div style={{ y: deviceY }}>
+              <motion.div
+                animate={{ y: [0, -16, 0] }}
+                transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}>
+                <Image src="/images/sp01.png" alt="SmartPulse Device"
+                  width={400} height={400} priority
+                  style={{ filter: 'drop-shadow(0 40px 80px rgba(0,196,212,0.4))', maxWidth: '100%' }} />
+              </motion.div>
             </motion.div>
 
             {/* Chips — hidden on mobile */}
