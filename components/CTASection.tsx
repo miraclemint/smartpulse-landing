@@ -62,8 +62,7 @@ export const CTASection = () => (
           พร้อมดูแล<br />สุขภาพของคุณ?
         </h2>
         <p style={{ fontSize: 18, color: '#64748B', lineHeight: 1.65, marginBottom: 48 }}>
-          ติดต่อ <strong style={{ color: '#0B1F3A' }}>ธาริน อุเทนรัตน์</strong> ·
-          Biofeedback Thailand Official
+          กรอกแบบฟอร์มด้านล่าง ทีมงานจะติดต่อกลับภายใน 24 ชั่วโมง
         </p>
         <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 52 }}>
           <motion.a href="#contact"
