@@ -66,21 +66,13 @@ export const CTASection = () => (
           Biofeedback Thailand Official
         </p>
         <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 52 }}>
-          <motion.a href="mailto:u.tharin@gmail.com"
+          <motion.a href="#contact"
             whileHover={{ scale: 1.04, boxShadow: '0 20px 48px rgba(0,196,212,0.4)' }}
             whileTap={{ scale: 0.97 }}
             style={{ background: 'linear-gradient(135deg, #00C4D4, #00A3B4)', color: '#fff',
               fontWeight: 800, fontSize: 16, padding: '17px 42px', borderRadius: 14,
               display: 'inline-flex', alignItems: 'center', gap: 8, textDecoration: 'none' }}>
-            📧 u.tharin@gmail.com
-          </motion.a>
-          <motion.a href="tel:+66894443424"
-            whileHover={{ scale: 1.04, background: '#F1F5F9' }} whileTap={{ scale: 0.97 }}
-            style={{ color: '#0B1F3A', fontWeight: 700, fontSize: 16, padding: '17px 42px',
-              borderRadius: 14, border: '1.5px solid rgba(11,31,58,0.15)',
-              background: '#fff', display: 'inline-flex', alignItems: 'center', gap: 8,
-              textDecoration: 'none' }}>
-            📞 089-444-3424
+            ✉️ ติดต่อเรา / สอบถามราคา
           </motion.a>
         </div>
 

@@ -115,21 +115,13 @@ export const FAQSection = () => {
             ยังมีคำถามอื่นอีก? ติดต่อเราได้เลย
           </p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <motion.a href="mailto:u.tharin@gmail.com"
+            <motion.a href="#contact"
               whileHover={{ scale: 1.04, boxShadow: '0 12px 32px rgba(0,196,212,0.3)' }}
               whileTap={{ scale: 0.97 }}
               style={{ display: 'inline-flex', alignItems: 'center', gap: 8,
                 background: '#00C4D4', color: '#fff', fontWeight: 700, fontSize: 14,
                 padding: '13px 28px', borderRadius: 12, textDecoration: 'none' }}>
-              📧 u.tharin@gmail.com
-            </motion.a>
-            <motion.a href="tel:+66894443424"
-              whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
-              style={{ display: 'inline-flex', alignItems: 'center', gap: 8,
-                background: '#fff', color: '#0B1F3A', fontWeight: 700, fontSize: 14,
-                padding: '13px 28px', borderRadius: 12, textDecoration: 'none',
-                border: '1.5px solid rgba(11,31,58,0.15)' }}>
-              📞 089-444-3424
+              ✉️ ส่งข้อความหาเรา
             </motion.a>
           </div>
         </motion.div>
