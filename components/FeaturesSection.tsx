@@ -61,9 +61,9 @@ export const FeaturesSection = () => {
             color: '#00C4D4', background: 'rgba(0,196,212,0.08)', padding: '6px 16px',
             borderRadius: 100, display: 'inline-block', marginBottom: 20 }}>ฟีเจอร์หลัก</span>
           <h2 style={{ fontSize: 'clamp(32px, 4vw, 52px)', fontWeight: 900, color: '#0B1F3A',
-            letterSpacing: '-1px', marginBottom: 16, lineHeight: 1.1 }}>2 โหมดการตรวจวัด</h2>
+            letterSpacing: '-1px', marginBottom: 16, lineHeight: 1.1 }}>4 โหมดการตรวจวัด</h2>
           <p style={{ fontSize: 17, color: '#64748B', maxWidth: 480, margin: '0 auto', lineHeight: 1.6 }}>
-            ครอบคลุมสุขภาพหัวใจและหลอดเลือดในการทดสอบเดียว
+            ครอบคลุมสุขภาพหัวใจ หลอดเลือด และสุขภาพจิตครบจบในอุปกรณ์เดียว
           </p>
         </motion.div>
 
@@ -74,6 +74,45 @@ export const FeaturesSection = () => {
               note: 'วิเคราะห์ด้วย Heart Rate Variability (HRV)', color: '#FF6B6B', bg: '#fff5f5', border: 'rgba(255,107,107,0.15)' },
             { icon: '🩸', title: 'Arterial Health Test', sub: 'ประเมินสุขภาพหลอดเลือด', items: arterialItems,
               note: 'วิเคราะห์ด้วย APG (Accelerated Plethysmography)', color: '#00C4D4', bg: '#f0fdff', border: 'rgba(0,196,212,0.15)' },
+          ].map((f, fi) => (
+            <motion.div key={fi} {...fadeUp(fi * 0.12)}
+              style={{ borderRadius: 24, border: `1px solid ${f.border}`, boxShadow: '0 4px 40px rgba(0,0,0,0.05)',
+                background: f.bg, padding: '36px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 28 }}>
+                <div style={{ width: 52, height: 52, borderRadius: 16, background: `${f.color}18`,
+                  display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 26 }}>{f.icon}</div>
+                <div>
+                  <div style={{ fontSize: 20, fontWeight: 800, color: '#0B1F3A', letterSpacing: '-0.3px' }}>{f.title}</div>
+                  <div style={{ fontSize: 13, color: f.color, fontWeight: 600 }}>{f.sub}</div>
+                </div>
+              </div>
+              {f.items.map((item, i) => (
+                <motion.div key={i} initial={{ opacity: 0, x: -12 }} whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }} transition={{ delay: i * 0.07 + fi * 0.1 }}
+                  style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '9px 0',
+                    borderBottom: i < f.items.length - 1 ? '1px solid rgba(0,0,0,0.05)' : 'none' }}>
+                  <div style={{ width: 20, height: 20, borderRadius: '50%', background: `${f.color}18`,
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    fontSize: 10, color: f.color, fontWeight: 800, flexShrink: 0 }}>✓</div>
+                  <span style={{ fontSize: 14, color: '#374151', fontWeight: 500 }}>{item}</span>
+                </motion.div>
+              ))}
+              <p style={{ fontSize: 12, color: '#9CA3AF', marginTop: 20, fontStyle: 'italic' }}>{f.note}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Breathing + Meditation */}
+        <div className="grid-2" style={{ gap: 24, marginBottom: 80 }}>
+          {[
+            { icon: '🌬️', title: 'Breathing Training', sub: 'ฝึกหายใจลดความเครียด',
+              color: '#4ADE80', bg: '#f0fdf4', border: 'rgba(74,222,128,0.15)',
+              items: ['ฝึกหายใจตามจังหวะที่แนะนำ', 'เลือกระดับความยากได้', 'เสียงธรรมชาติประกอบการฝึก', 'แสดงกราฟการหายใจ real-time', 'คะแนนการฝึกหลังจบ session'],
+              note: 'ช่วยปรับสมดุลระบบประสาทอัตโนมัติ (ANS)' },
+            { icon: '🧘', title: 'Meditation', sub: 'กำทำสมาธิ รักษาสมดุลอารมณ์',
+              color: '#A78BFA', bg: '#faf5ff', border: 'rgba(167,139,250,0.15)',
+              items: ['โหมดสมาธิพร้อม biofeedback', 'เลือกเสียงธรรมชาติที่ต้องการ', 'ติดตามระดับความผ่อนคลาย', 'รักษาสมดุลทางอารมณ์', 'รายงานผลหลังการทำสมาธิ'],
+              note: 'ลดความเครียดสะสม ปรับปรุงคุณภาพการนอน' },
           ].map((f, fi) => (
             <motion.div key={fi} {...fadeUp(fi * 0.12)}
               style={{ borderRadius: 24, border: `1px solid ${f.border}`, boxShadow: '0 4px 40px rgba(0,0,0,0.05)',
